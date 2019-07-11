@@ -36,4 +36,31 @@ class Admin_model extends CI_Model
         }
     }
 
+    public function insertOwner ($data) {
+
+        //insert data to the database
+        $this->db->insert('owner',$data);
+        return $this->db->insert_id();
+    }
+
+    function getIdOwner($where)
+    {
+        $this->db->select('id');
+        $this->db->from("owner");
+        $this->db->where("nama",$where);
+        $query = $this->db->get();
+        if ($query->num_rows() == 0) {
+            return FALSE;
+        } else {
+            return $query->result();
+        }
+    }
+
+    public function insertUser ($data) {
+
+        //insert data to the database
+        $this->db->insert('login',$data);
+        return $this->db->insert_id();
+    }
+
 }

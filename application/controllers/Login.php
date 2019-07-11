@@ -55,12 +55,12 @@ class Login extends CI_Controller {
 
                     $data['error'] = '<div class="alert alert-danger" style="margin-top: 3px">
                         <div class="header"><b><i class="fa fa-exclamation-circle"></i> ERROR</b> username atau password salah!</div></div>';
-                    $this->load->view('login', $data);
+                    $this->load->view('login_view', $data);
                 }
 
             }else{
 
-                $this->load->view('login');
+                $this->load->view('login_view');
             }
 
         }

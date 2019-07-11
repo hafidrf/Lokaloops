@@ -3,7 +3,7 @@
 <div class="chit-chat-layer1">
 	<div class="col-md-12 chart-layer1-left"> 
 		<div class="table-responsive-sm">
-            <table class="table" data-provide="datatables">
+            <table id="table_items" class="table" data-provide="datatables">
                 <thead>
                 <tr>
 
